@@ -1,0 +1,98 @@
+@font-face {
+  src: url("../fonts/IRANSans1.ttf");
+  font-family: "IRANSans1";
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("../fonts/Vazir.eot");
+  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff") format("woff"),
+    url("../fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "roboto";
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff"),
+    url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: "IRANSans1" !important;
+}
+
+.appbar{
+  padding: 0 !important;
+}
+
+.reverseIcon{
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+
+.btn-black{
+  color: black;
+  background-color:white;
+  border: none;
+  font-size: 12px;
+  font-weight: bold;
+  &:hover{
+    background-color:white;
+  }
+}
+
+// menu.jsx
+.menu-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+
+    .hamburger-menu{
+      color: black ;
+      font-size:14px;
+      font-weight: bold;
+
+      i{
+        font-size:20px;
+        color: black !important ;
+      }
+    }
+
+    li{
+      padding: 10px;
+      font-size: 13px;
+      color: rgb(77, 77, 77);
+      cursor: pointer;
+
+    
+      i{
+        font-size: 14px;
+        padding-left: 5px;
+      }
+    }
+  }
+}

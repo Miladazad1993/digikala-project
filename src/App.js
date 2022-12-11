@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./Public/css/style.css";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { HelmetProvider, Helmet } from "react-helmet-async";
+import AppRouter from "./appRouter";
+import { CacheProvider } from "@emotion/react";
+import { prefixer } from "stylis";
+import stylisRTLPlugin from "stylis-plugin-rtl";
+import createCache from "@emotion/cache";
+
+//NOTE Create Custom Theme
+const theme = createTheme({
+  typography: {
+    fontFamily: "Vazir , IRANSans1 , roboto"
+  }
+});
+
+//NOTE Create RTL Cache
+const cacheRTL = createCache({
+  key: "muirtl",
+  stylisPlugins: [prefixer, stylisRTLPlugin],
+});
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CacheProvider value={cacheRTL}>
+      <ThemeProvider theme={theme}>
+        <HelmetProvider>
+          <Helmet>
+            <title>فروشگاه اینترنتی دیجی کالا</title>
+          </Helmet>
+          <AppRouter />
+
+        </HelmetProvider>
+      </ThemeProvider>
+    </CacheProvider>
+
   );
 }
 
