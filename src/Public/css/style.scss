@@ -28,7 +28,7 @@
   font-display: swap;
 }
 
-body{
+body {
   margin: 0;
   padding: 0;
 }
@@ -37,62 +37,109 @@ body{
   font-family: "IRANSans1" !important;
 }
 
-.appbar{
+.appbar {
   padding: 0 !important;
 }
 
-.reverseIcon{
+.reverseIcon {
   transform: scaleX(-1);
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
   -ms-transform: scaleX(-1);
 }
 
-.btn-black{
+.btn-black {
   color: black;
-  background-color:white;
+  background-color: white;
   border: none;
   font-size: 12px;
   font-weight: bold;
-  &:hover{
-    background-color:white;
+
+  &:hover {
+    background-color: white;
   }
 }
 
 // menu.jsx
-.menu-container{
+.menu-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
-  ul{
+  ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     list-style-type: none;
 
-    .hamburger-menu{
-      color: black ;
-      font-size:14px;
+    .hamburger-menu {
+      color: black;
+      font-size: 14px;
       font-weight: bold;
 
-      i{
-        font-size:20px;
-        color: black !important ;
+      i {
+        font-size: 20px;
+        color: black !important;
       }
     }
 
-    li{
+    li {
       padding: 10px;
       font-size: 13px;
       color: rgb(77, 77, 77);
       cursor: pointer;
 
-    
-      i{
+
+      i {
         font-size: 14px;
         padding-left: 5px;
       }
     }
   }
+}
+
+// headerSwiper.jsx
+
+.header-swiper {
+  cursor: pointer;
+  &:hover{
+    .swiper-button-next,
+    .swiper-button-prev {
+      opacity:1;
+      transition: opacity .5s ease;
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    opacity: 0;
+    --swiper-navigation-size: 12px;
+    --swiper-navigation-color: black;
+    --swiper-navigation-font-weight: bold;
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+    right: 0 !important;
+    margin-right: 60px;
+    margin-top: 70px !important;
+  }
+
+  .swiper-button-next {
+    margin-right: 110px !important;
+  }
+
+  .swiper-pagination {
+    text-align: right;
+    right: 35px;
+  }
+  .swiper-pagination-bullet {
+    background: rgb(18, 14, 14);
+    width: 5px;
+    height: 5px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: white;
+  }
+
 }

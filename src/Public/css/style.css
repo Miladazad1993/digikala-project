@@ -103,4 +103,48 @@ body {
   font-size: 14px;
   padding-left: 5px;
 }
+
+.header-swiper {
+  cursor: pointer;
+}
+
+.header-swiper:hover .swiper-button-next,
+.header-swiper:hover .swiper-button-prev {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.header-swiper .swiper-button-next,
+.header-swiper .swiper-button-prev {
+  opacity: 0;
+  --swiper-navigation-size: 12px;
+  --swiper-navigation-color: black;
+  --swiper-navigation-font-weight: bold;
+  background-color: white;
+  padding: 20px;
+  border-radius: 50%;
+  right: 0 !important;
+  margin-right: 60px;
+  margin-top: 70px !important;
+}
+
+.header-swiper .swiper-button-next {
+  margin-right: 110px !important;
+}
+
+.header-swiper .swiper-pagination {
+  text-align: right;
+  right: 35px;
+}
+
+.header-swiper .swiper-pagination-bullet {
+  background: #120e0e;
+  width: 5px;
+  height: 5px;
+}
+
+.header-swiper .swiper-pagination-bullet-active {
+  background: white;
+}
 /*# sourceMappingURL=style.css.map */
